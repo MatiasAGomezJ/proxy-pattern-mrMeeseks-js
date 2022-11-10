@@ -1,0 +1,15 @@
+{
+  "name": "proxy-pattern-mrmeeseks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@MatiasAGomezJ:MatiasAGomezJ/proxy-pattern-mrMeeseks-js.git"
+  },
+  "author": "Matias Alejandro Gomez Jatab",
+  "license": "ISC"
+}
