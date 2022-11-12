@@ -1,0 +1,21 @@
+{
+  "name": "mrmeeseeks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mrmeeseeks.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@MatiasAGomezJ:MatiasAGomezJ/proxy-pattern-mrMeeseks-js.git"
+  },
+  "author": "Matias Alejandro Gomez Jatab",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
