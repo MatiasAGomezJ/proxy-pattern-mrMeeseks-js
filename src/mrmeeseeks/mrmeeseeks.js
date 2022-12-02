@@ -5,23 +5,25 @@ function MrMeeseeks() {
 		"Yes sireee!",
 		"Oooh yeah! Can do!"
 	];
-	this.speakOnRequest = function() {
-		randomIndex = Math.floor(Math.random() * this.messageOnRequest.length);
-		return this.messageOnRequest[randomIndex]
-	};
-	this.makeRequest = function(verb, object) {
-		let closure = function(object) {
-			function execute() {
-				return verb + " " + object;
-			}
-			return execute;
-		};
-		this.accion = closure(object);
-	};
-	this.fulfillRequest = function() {
-		return this.accion() + " All done!!";
-	};
 }
+MrMeeseeks.prototype.speakOnRequest = function () {
+	randomIndex = Math.floor(Math.random() * this.messageOnRequest.length);
+	return this.messageOnRequest[randomIndex]
+};
+	
+MrMeeseeks.prototype.makeRequest = function(verb, object) {
+	let closure = function(object) {
+		function execute() {
+			return verb + " " + object;
+		}
+		return execute;
+	};
+	this.accion = closure(object);
+};
+	
+MrMeeseeks.prototype.fulfillRequest = function() {
+	return this.accion() + " All done!!";
+};
 
 var factory = {
 	mrMeeseeks: null,
