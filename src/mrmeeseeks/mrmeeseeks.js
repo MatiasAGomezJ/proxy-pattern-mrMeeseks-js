@@ -21,18 +21,20 @@ MrMeeseeks.prototype.makeRequest = function(verb, object) {
 	this.accion = closure(object);
 };
 	
-MrMeeseeks.prototype.fulfillRequest = function() {
+MrMeeseeks.prototype.fulfillRequest = function () {
+	this.accion();
 	return this.accion() + " All done!!";
 };
 
-var factory = {
-	mrMeeseeks: null,
-	get: function() {
-		if (factory.mrMeeseeks == null) {
-			factory.mrMeeseeks = new MrMeeseeks;
-		}
-		return factory.mrMeeseeks;
-	}
-};
+var factory = (function singletonMrMeeseeks() {
+
+    const prototipo = new MrMeeseeks();
+
+    return {
+        get: function() {
+            return prototipo;
+        }
+    };
+})();
 
 exports.singleMrMeeseeks = factory;

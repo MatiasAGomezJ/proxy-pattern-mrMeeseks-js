@@ -5,7 +5,7 @@ const factory = require('../mrmeeseeks');
 
 test('Creo un meeseeks usando su factoria', () => {
     expect(factory.singleMrMeeseeks.get()).toBeTruthy;
-  });
+});
 
 test('Los meeseeks creados son el mismo (singleton)', () => {
     let meeseeks_primer = factory.singleMrMeeseeks.get();
